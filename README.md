@@ -59,7 +59,19 @@ Commit the generated files; Vercel builds don't need a browser.
 
 ## Deploy to Vercel
 
-Import the repository in Vercel; no configuration is needed. Set one environment variable:
+Live: **https://mahmoudadel810-portfolio.vercel.app** (Vercel project `mahmoud-adel-portfolio`).
+
+The project already exists and this folder is linked to it (`.vercel/`). To publish a change:
+
+```bash
+vercel deploy --prod
+```
+
+To deploy automatically on every push instead, open the project in Vercel → Settings → Git and connect this
+GitHub repository (Vercel's GitHub app must be given access to it). Don't import the repository as a new
+project — that would create a second site.
+
+Environment variable (already set in the project):
 
 | Variable | Purpose |
 |---|---|
