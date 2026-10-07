@@ -148,7 +148,6 @@ export function Highlights({ t, locale }: Props) {
             <li
               key={id}
               data-reveal
-              tabIndex={0}
               className={cx("hl-card flex flex-col justify-between gap-6 rounded-xl border border-border bg-surface p-5 transition-colors duration-150 hover:border-border-strong", SPANS[i])}
             >
               <div>
@@ -248,7 +247,7 @@ export function DiagramPanel({
 
 function ProjectLinks({ meta, t }: { meta: ProjectMeta; t: Content }) {
   const pill =
-    "inline-flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-xs font-medium text-text transition-colors duration-150 hover:border-accent hover:text-accent";
+    "inline-flex h-11 md:h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-xs font-medium text-text transition-colors duration-150 hover:border-accent hover:text-accent";
   return (
     <ul className="flex flex-wrap gap-2">
       {meta.live && (
@@ -355,7 +354,7 @@ export function Projects({ t, locale }: Props) {
                     {meta.caseStudy && (
                       <Link
                         href={`/${locale}/projects/${meta.slug}`}
-                        className="group/cs inline-flex min-h-9 items-center gap-1.5 text-sm font-medium text-accent"
+                        className="group/cs inline-flex min-h-11 md:min-h-9 items-center gap-1.5 text-sm font-medium text-accent"
                       >
                         {t.ui.readCaseStudy}
                         <ArrowIcon

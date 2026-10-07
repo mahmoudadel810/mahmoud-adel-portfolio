@@ -11,6 +11,7 @@ import {
 import { isLocale, locales } from "@/i18n/routing";
 import Link from "next/link";
 import { alternatesFor } from "@/lib/metadata";
+import { SITE_URL } from "@/lib/site";
 import { diagrams } from "@/generated/diagrams";
 import { DiagramPanel, StackChips } from "@/components/home-sections";
 import { SiteControls } from "@/components/identity";
@@ -35,7 +36,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title,
     description: t.caseStudies[slug].overview,
     alternates: alternatesFor(locale, `/projects/${slug}`),
-    openGraph: { title, description: t.caseStudies[slug].overview, type: "article" },
+    openGraph: {
+      title,
+      description: t.caseStudies[slug].overview,
+      type: "article",
+      locale: locale === "ar" ? "ar_EG" : "en_US",
+      siteName: t.identity.name,
+      url: `${SITE_URL}/${locale}/projects/${slug}`,
+    },
   };
 }
 

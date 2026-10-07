@@ -39,7 +39,7 @@ export function MobileMenu({
         onClick={(e) => {
           if (e.target === ref.current) close();
         }}
-        className="m-0 ms-auto h-dvh max-h-none w-[min(22rem,88vw)] max-w-none border-s border-border bg-bg p-0 text-text backdrop:bg-black/50"
+        className="m-0 ms-auto h-dvh max-h-none w-[min(22rem,88vw)] max-w-none border-s border-border bg-bg p-0 text-text backdrop:bg-[rgba(0,0,0,0.55)]"
       >
         <div className="flex h-full flex-col px-5 pb-6">
           <div className="flex h-16 items-center justify-end">
